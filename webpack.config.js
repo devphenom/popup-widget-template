@@ -7,7 +7,7 @@ const isProd = process.env.NODE_ENV === "production";
 const config = {
   mode: isProd ? "production" : "development",
   entry: {
-    app: ["webpack-dev-server/client?http://0.0.0.0:3000/", "webpack/hot/only-dev-server", "./src/index.tsx"],
+    app: ["./src/index.tsx"],
     Widget: ["./src/widget.ts"],
   },
   output: {
