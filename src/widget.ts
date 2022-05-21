@@ -20,7 +20,7 @@ const Widget: IWidget = {
     this.createIframe();
   },
   createIframe: function () {
-    this.iframe = window.open("http://localhost:9000", "null", "top:0");
+    this.iframe = window.open("https://62883b7a725d1e294eae5899--loquacious-torte-e9c695.netlify.app/", "null", "top:0");
     this.setupListeners();
   },
   setupListeners: function () {
