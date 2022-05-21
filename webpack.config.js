@@ -5,7 +5,7 @@ const TerserWebpackPlugin = require("terser-webpack-plugin");
 const isProd = process.env.NODE_ENV === "production";
 
 const config = {
-  mode: isProd ? "production" : "development",
+  mode: !isProd ? "development" : "production",
   entry: {
     app: ["./src/index.tsx"],
     Widget: ["./src/widget.ts"],
