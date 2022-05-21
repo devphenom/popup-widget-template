@@ -1,26 +1,27 @@
-interface IConfig {
-  readonly email: string;
-}
+// @ts-ignore
+// interface IConfig {
+//   readonly email: string;
+// }
 
-interface IWidget {
-  config: IConfig | null;
-  iframe: Window | null;
-  init: (config: IConfig) => void;
-  setupListeners: () => void;
-  createIframe: () => void;
-  handleMessage: (event: MessageEvent) => void;
-}
+// interface IWidget {
+//   config: IConfig | null;
+//   iframe: Window | null;
+//   init: (config: IConfig) => void;
+//   setupListeners: () => void;
+//   createIframe: () => void;
+//   handleMessage: (event: MessageEvent) => void;
+// }
 
-const Widget: IWidget = {
+const Widget = {
   iframe: null,
   config: null,
-  init: function (config: IConfig) {
+  init: function (config) {
     this.config = config;
     console.log(config);
     this.createIframe();
   },
   createIframe: function () {
-    this.iframe = window.open("https://62883b7a725d1e294eae5899--loquacious-torte-e9c695.netlify.app/", "null", "top:0");
+    this.iframe = window.open("https://devphenom-widget.netlify.app/", "null", "top:0");
     this.setupListeners();
   },
   setupListeners: function () {
