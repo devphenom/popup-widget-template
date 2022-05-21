@@ -59,7 +59,7 @@ module.exports = {
       excludeChunks: ["widget"],
       template: "./src/index.html",
     }),
-    new BundleAnalyzerPlugin(),
+    // new BundleAnalyzerPlugin(),
   ],
 };
 
